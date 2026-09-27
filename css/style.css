@@ -63,6 +63,15 @@ padding, font-size and color for the text*/
   padding: 8px 12px;
   font-size: 0.9rem;
   color: #3e4c59;
-}
 
+ /*ChatGPT help with formatting 360 after taking screenshot and image looked off*/
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .feature {
+    grid-column: span 1;
+  }
+}
 
