@@ -1,0 +1,68 @@
+/* Base */
+
+/*body contains information for sizing and color margin, font-family, background-color, and text color*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafbfc;
+  color: #1f2933;
+}
+
+/*sizing for the site header and footer that contains copyright information*/
+.site-header,
+footer {
+  padding: 24px;
+  text-align: center;
+}
+
+/*site header provides the main heading text title of the site*/
+/*header for the page includes h1 that has the title of the page along with tagline*/
+.site-header h1 { margin: 0; color: #0b3d91; }
+
+/*Grid allows the design to adjust to the size of the device which makes it responsive*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /*gap provides space between images without margins*/
+  gap: 16px;
+  padding: 24px;
+}
+
+/*The first featured photo has span 2 columns which makes it twice as wide as the remaining photos 
+the remaining photos have a span 1 column.*/
+/* featured photo spans 2 columns */
+.gallery .feature {
+  grid-column: span 2;
+}
+
+/*provides margin zero, border-radius at 8px provides rounded corners in images, background color and box-shadow that 
+provides a slight shadow around image*/
+.photo {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(11, 61, 145, 0.06);
+}
+
+
+/*Photo image dimensions for width and height. object-fit allows the photo to fit without changing any more dimensions. 
+Displayed in a block*/
+.photo img {
+  width: 100%;
+  height: 220px;
+/*Object fit cover prevents making a photo look distorted*/
+  object-fit: cover;
+  display: block;
+}
+
+/*figcaption contains text that describes the image to the viewer
+for this project it shows the location and for some images it shows title of artwork.
+padding, font-size and color for the text*/
+.photo figcaption {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #3e4c59;
+}
+
+
